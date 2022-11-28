@@ -1,6 +1,6 @@
 require("dotenv").config();                                                     //6 //7 to establish db connection connect.js
 const express = require("express");                                           //1
-
+const cors = require("cors")
 const db = require("./db/connect");                                           //10 import db
 const { mongoose } = require('mongoose');
 
@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 app.use(express.json());                                                    //12 middleware   //13 routes
 
 //12.1 yet to update cors 
-
+app.use(cors());
 //routes
 app.use('/api',employeeRoutes);                                                     //24 employeeroutes  (/api-label to diff)
 
