@@ -1,0 +1,5 @@
+GET/employees
+GET/employees/:empID
+POST/employees
+PUT/employees/:empID
+DELETE/employees/:empID
